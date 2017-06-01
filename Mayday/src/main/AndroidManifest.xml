@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kumail.mayday"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.kumail.mayday.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kumail.mayday.Register"
+            android:label="@string/title_activity_register"
+            android:parentActivityName="com.kumail.mayday.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kumail.mayday.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.kumail.mayday.Display"
+            android:label="@string/title_activity_display"
+            android:parentActivityName="com.kumail.mayday.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kumail.mayday.MainActivity" />
+        </activity>
+        <service android:name="com.kumail.mayday.BgService" />
+        <activity
+            android:name="com.kumail.mayday.Instructions"
+            android:label="@string/title_activity_instructions"
+            android:parentActivityName="com.kumail.mayday.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kumail.mayday.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.kumail.mayday.Verify"
+            android:label="@string/title_activity_verify"
+            android:parentActivityName="com.kumail.mayday.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kumail.mayday.MainActivity" />
+        </activity>
+    </application>
+</manifest>
