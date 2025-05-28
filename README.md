@@ -45,6 +45,36 @@ This project is a standard Android application and uses Gradle for building.
       ```
     (Note: Release builds will require setting up signing configurations.)
 
+## Running Tests
+
+This project includes unit tests and instrumented tests.
+
+**1. Using Android Studio:**
+   - **Unit Tests (located in `Mayday/src/test/java`):**
+     - Right-click on the test file (e.g., `AppUnitTests.java`) or a specific test class/method in the Project view.
+     - Select "Run 'TestName'".
+     - Results will appear in the Run window.
+   - **Instrumented Tests (located in `Mayday/src/androidTest/java`):**
+     - Ensure you have an Android device or emulator connected and configured.
+     - Right-click on the test file (e.g., `AppInstrumentedTests.java`) or a specific test class/method.
+     - Select "Run 'TestName'".
+     - Results will appear in the Run window.
+
+**2. Using Gradle commands from the terminal:**
+   - Navigate to the root directory of the project (where `gradlew` is located).
+   - **To run unit tests:**
+     ```bash
+     ./gradlew testDebugUnitTest
+     ```
+     (Or `./gradlew test` if you only have one build variant or want to run for all variants).
+     Test reports are usually generated in `Mayday/build/reports/tests/testDebugUnitTest/`.
+   - **To run instrumented tests:**
+     ```bash
+     ./gradlew connectedDebugAndroidTest
+     ```
+     (Or `./gradlew connectedAndroidTest` to run for all variants). This requires a connected device or running emulator.
+     Test reports are usually generated in `Mayday/build/reports/androidTests/connected/`.
+
 ## Permissions Used
 
 This app requests the following permissions to function correctly:
