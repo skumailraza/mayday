@@ -20,6 +20,10 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:19.1.0'
-    compile 'junit:junit:4.12'
-    compile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    // JUnit for unit tests
+    testImplementation 'junit:junit:4.12'
+    // Espresso for UI/instrumented tests
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    // Android Test Runner for instrumented tests
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
 }
